@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+int Solution::coverPoints(vector<int> &A, vector<int> &B) {
+    
+    
+    int dis=0;
+    
+    for(int i=1;i<A.size();i++){
+      /*  int a = abs(A[i]);
+        int b = abs(A[i-1]);
+        int c = abs(B[i]);
+        int d = abs(B[i]);*/
+       // dis +=  sqrt( pow(B[i]-B[i-1],2) + pow(A[i]-A[i-1],2) );
+       int ans = max(abs(B[i]-B[i-1] ), abs(A[i]-A[i-1]));
+       dis += ans;
+    }
+    
+    return abs(dis);
+    
+}
